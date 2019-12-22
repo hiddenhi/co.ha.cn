@@ -1,0 +1,203 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" href="icon.png" />
+<link rel="apple-touch-startup-image"  href="icon.png" />
+<link rel="apple-touch-startup-image" media="screen and (orientation: portrait)" href="icon.png" /> <!--竖-->
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="bookmark" href="/favicon.ico">
+<title>河南长欧网</title>
+<style>
+*{
+
+}
+#inde{
+moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-ms-user-select:none;
+user-select:none;
+-webkit-appearance:none;
+}
+
+    
+button{
+background-color:orange;
+border:1px solid #FFFFFF;
+color:#000000;
+outline: none;
+background: #FFFFFF;
+}
+
+#btn {
+ 
+    background:#3383da;
+    border: none;
+    color: white;
+    font-family:Arial;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+ 
+}
+
+.btn{
+ 
+    background:#3383da;
+    border: none;
+    color: white;
+    font-family:Arial;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+ 
+}
+
+    @keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-webkit-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-moz-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-o-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-ms-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-webkit-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-moz-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-o-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-ms-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    #toast{
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 14px;
+      line-height: 1;
+      padding:10px;
+      border-radius: 3px;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      z-index: 99999;
+    }
+    .hide{
+      display: none;
+    }
+    .fadeOut{
+      animation: fadeOut .5s;
+    }
+    .fadeIn{
+      animation:fadeIn .5s;
+    }
+</style></head>
+
+
+<body>
+
+    
+<div align="center" id="inde">
+ <object style="width:150px;height:150px;" data="icons.svg" type="image/svg+xml"></object>
+<br>
+    <button class="btn" data-clipboard-text="信息提示" onclick="copy()">信息提示</button><br>
+CO.HA.CN
+</div>
+
+<script>
+    document.oncontextmenu=function(e){
+//或者return false;
+e.preventDefault();
+};
+
+    function copy(){
+    toast({message:"信息提示哟",time:1500});
+    }
+    
+    
+  var toast = function(params){
+    var el = document.createElement("div");
+    el.setAttribute("id","toast");
+    el.innerHTML = params.message;
+    document.body.appendChild(el);
+    el.classList.add("fadeIn");
+    setTimeout(function(){
+      el.classList.remove("fadeIn");
+      el.classList.add("fadeOut");
+      el.addEventListener("animationend", function(){
+        el.classList.add("hide");
+      });
+    },params.time);
+  };
+
+
+
+</script>
+    
+<script>
+if(('standalone' in window.navigator)&&window.navigator.standalone){  
+
+    var noddy,remotes=false;  
+
+    document.addEventListener('click',function(event){  
+
+            noddy=event.target;  
+
+            while(noddy.nodeName!=='A'&&noddy.nodeName!=='HTML') noddy=noddy.parentNode;  
+
+            if('href' in noddy&&noddy.href.indexOf('http')!==-1&&(noddy.href.indexOf(document.location.host)!==-1||remotes)){  
+
+                    event.preventDefault();  
+
+                    document.location.href=noddy.href;  
+
+            }  
+    },false);  
+}  
+</script>
+
+
+</body>
+</html>
