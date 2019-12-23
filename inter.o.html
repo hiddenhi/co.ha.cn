@@ -1,0 +1,229 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">  
+
+<link rel="apple-touch-icon" href="LOGOS.png" />
+<link rel="apple-touch-startup-image"  href="LOGOS.png" />
+<link rel="apple-touch-startup-image" media="screen and (orientation: portrait)" href="LOGOS.png" /> <!--竖-->
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="bookmark" href="/favicon.ico">
+<title>程欧在线</title>
+<style>
+@font-face{  
+    font-family:'Open Sans Light';
+    src:url(opensans-300.ttf);
+    font-weight:auto;
+    font-style:auto;
+}
+
+*{
+moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-ms-user-select:none;
+user-select:none;
+-webkit-appearance:none;
+-webkit-touch-callout:none;/*系统默认菜单被禁用*/
+-webkit-user-select:none;/*webkit浏览器*/
+-khtml-user-select:none;/*早起浏览器*/
+-moz-user-select:none;/*火狐浏览器*/
+-ms-user-select:none;/*IE浏览器*/
+user-select:none;/*用户是否能够选中文本*/
+}
+
+    
+button{
+background-color:orange;
+border:1px solid #FFFFFF;
+color:#000000;
+outline: none;
+background: #FFFFFF;
+}
+
+#btn {
+ 
+    background:#3383da;
+    border: none;
+    color: white;
+    font-family:Arial;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+ 
+}
+
+.btn{
+ 
+    background:#3383da;
+    border: none;
+    color: white;
+    font-family:Arial;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+ 
+}
+
+    @keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-webkit-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-moz-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-o-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @-ms-keyframes fadeIn {
+      0%    {opacity: 0}
+      100%  {opacity: 1}
+    }
+    @keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-webkit-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-moz-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-o-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    @-ms-keyframes fadeOut {
+      0%    {opacity: 1}
+      100%  {opacity: 0}
+    }
+    #toast{
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: 14px;
+      line-height: 1;
+      padding:10px;
+      border-radius: 3px;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%,-50%);
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      z-index: 99999;
+    }
+    .hide{
+      display: none;
+    }
+    .fadeOut{
+      animation: fadeOut .5s;
+    }
+    .fadeIn{
+      animation:fadeIn .5s;
+    }
+    *{font-family:'Open Sans Light';}
+
+</style>
+    </head>
+
+
+<body>
+
+    
+<div align="center" id="inde">  
+
+<svg style="width:150px;height:150px;" version="1.0" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 8000 8000" preserveAspectRatio="xMidYMid meet">
+<g id="layer101" fill="#007cca" stroke="none">
+ <path d="M0 4000 l0 -4000 4000 0 4000 0 0 4000 0 4000 -4000 0 -4000 0 0 -4000z"/>
+ </g>
+<g id="layer102" fill="#ffffff" stroke="none">
+ <path d="M0 4000 l0 -4000 4000 0 4000 0 0 4000 0 4000 -4000 0 -4000 0 0 -4000z m4416 2991 c349 -53 612 -136 914 -286 183 -91 307 -165 432 -257 451 -334 806 -779 1011 -1268 184 -439 251 -844 227 -1365 -19 -422 -113 -776 -311 -1175 -238 -477 -583 -869 -1019 -1156 -357 -235 -725 -385 -1125 -459 -194 -36 -312 -45 -574 -45 -297 0 -460 20 -741 90 -415 104 -776 284 -1142 570 -108 85 -362 340 -461 463 -306 381 -502 802 -602 1292 -52 257 -58 339 -52 669 6 299 17 398 71 631 201 857 782 1597 1567 1995 356 181 746 293 1124 324 129 10 553 -4 681 -23z"/>
+ <path d="M3053 4849 c-578 -578 -1046 -1052 -1039 -1055 6 -2 481 -3 1056 -2 l1045 3 3 1053 c1 578 -2 1052 -6 1052 -5 0 -481 -473 -1059 -1051z"/>
+ <path d="M4427 5273 c-4 -3 -7 -408 -7 -900 l0 -893 -822 0 -821 0 -144 -144 c-78 -80 -143 -147 -143 -150 0 -3 509 -6 1130 -6 l1130 0 0 1050 0 1050 -158 0 c-87 0 -162 -3 -165 -7z"/>
+ <path d="M5047 4744 c-4 -4 -7 -418 -7 -921 l0 -913 -848 0 -847 0 -150 -150 -150 -150 1163 0 1162 0 -2 1068 -3 1067 -156 3 c-85 1 -158 -1 -162 -4z"/>
+ </g>
+</svg>
+    
+<br>
+<br><p>程欧在线</p>
+    <button class="btn" data-clipboard-text="联系方式" onclick="copy()">联系方式</button><br>
+CO.HA.CN<br>
+    A@CO.HA.CN
+</div>
+
+<script>
+document.oncontextmenu=function(e){
+e.preventDefault();
+};
+
+    function copy(){
+    toast({message:"EMAIL:A@CO.HA.CN",time:1500});
+    }
+    
+    
+  var toast = function(params){
+    var el = document.createElement("div");
+    el.setAttribute("id","toast");
+    el.innerHTML = params.message;
+    document.body.appendChild(el);
+    el.classList.add("fadeIn");
+    setTimeout(function(){
+      el.classList.remove("fadeIn");
+      el.classList.add("fadeOut");
+      el.addEventListener("animationend", function(){
+        el.classList.add("hide");
+      });
+    },params.time);
+  };
+
+
+
+</script>
+    
+<script>
+if(('standalone' in window.navigator)&&window.navigator.standalone){  
+
+    var noddy,remotes=false;  
+
+    document.addEventListener('click',function(event){  
+
+            noddy=event.target;  
+
+            while(noddy.nodeName!=='A'&&noddy.nodeName!=='HTML') noddy=noddy.parentNode;  
+
+            if('href' in noddy&&noddy.href.indexOf('http')!==-1&&(noddy.href.indexOf(document.location.host)!==-1||remotes)){  
+
+                    event.preventDefault();  
+
+                    document.location.href=noddy.href;  
+
+            }  
+    },false);  
+}  
+</script>
+
+
+</body>
+</html>
