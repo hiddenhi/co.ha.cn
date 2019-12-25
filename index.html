@@ -144,7 +144,7 @@ background: #FFFFFF;
       animation:fadeIn .5s;
     }
     *{font-family:'Open Sans Light';}
-
+    xmp{background:#00AEAE;color:#000000;text-align:left;padding:10px;white-space:normal;}
 </style>
     </head>
 
@@ -168,6 +168,34 @@ background: #FFFFFF;
     
 <br>
 <br><p>程欧在线</p>
+PHP连接Access查询Hash<br>
+<xmp>
+<?php 
+$hash=$_GET['hash'];
+$dsn = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("db.mdb");
+$conn = odbc_connect($dsn,"","") or die("error");
+$sqlquery = "select * from name where hash='".$hash."'";
+$exec = odbc_exec($conn,$sqlquery);
+$row = odbc_fetch_array($exec);
+echo $row['value'];
+odbc_close($conn);
+?> 
+</xmp>
+PHP连接Access写入Hash<br>   
+<xmp>
+<?php 
+$dsn = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=". realpath("db.mdb");
+$conn = odbc_connect($dsn,"","") or die("error");
+$sqlquery = "select * from name where hash='".$hash."'";
+$tit=md5(date('Y-m-d h:i:s', time()));
+$sql="insert into name values ('{$tit}','{$tit}')";
+$exec = odbc_exec($conn,$sql);
+echo $tit;
+odbc_close($conn);
+exit();
+?> 
+</xmp>    
+    <br>
     <button class="btn" data-clipboard-text="联系方式" onclick="copy()">联系方式</button><br>
 CO.HA.CN<br>
     A@CO.HA.CN
