@@ -11,25 +11,39 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="bookmark" href="/favicon.ico">
-<title>程欧在线</title>
-<script type="text/javascript">
-//iOS Web APP中点击链接跳转到Safari 浏览器新标签页的问题 devework.com
-//stanislav.it/how-to-prevent-ios-standalone-mode-web-apps-from-opening-links-in-safari
-if(("standalone" in window.navigator) && window.navigator.standalone){
-var noddy, remotes = false;
-document.addEventListener('click', function(event) {
-noddy = event.target;
-while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
-noddy = noddy.parentNode;
-}
-if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
-{
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- 添加脚本 -->
+<script>
+
+if(('standalone' in window window.navigatornavigator) && window window.navigatornavigator.standalonestandalone) {
+
+var noddy noddy, remotes remotes = false;
+document
+document.addEventListener('click', function (eventevent) {
+noddy 
+noddy = event event.targettarget;
+
+while (noddynoddy.nodeName nodeName !== 'A' && noddy noddy.nodeName nodeName !== 'HTML') noddy noddy = noddy noddy.parentNodeparentNode;
+
+if ('href' in noddy noddy && noddy noddy.hrefhref.indexOf('http') !== -1 && (noddynoddy.hrefhref.indexOf(documentdocument.locationlocation.hosthost) !==
+
+-1 || remotes remotes)) {
+event
 event.preventDefault();
-document.location.href = noddy.href;
+document
+document.locationlocation.href href = noddy noddy.hrefhref;
+
 }
-},false);
+
+}, false);
+
 }
+
 </script>
+
+<title>程欧在线</title>
 
 <style>
 @font-face{  
